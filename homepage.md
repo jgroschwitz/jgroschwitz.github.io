@@ -1,4 +1,4 @@
-
+<img src="http://www.coli.uni-saarland.de/~jonasg/profile.jpg" alt="That's me" style="width: 300px; float: right;"/>
 Hi, I'm Jonas Groschwitz, currently a joint PhD student of Saarland University and Macquarie University (Sydney). My key interest is semantic parsing, specifically for AMR (Abstract Meaning Representation, [amr.isi.edu.au](amr.isi.edu.au)). I use methods ranging from tree automata to neural networks.<br><br><br><br><br><br><br><br>
 
 
@@ -21,5 +21,6 @@ Jonas Groschwitz, Alexander Koller and Mark Johnson, **Efficient techniques for 
 
 Jonas Groschwitz, Alexander Koller and Christoph Teichmann, **Graph parsing with s-graph grammars**. In *Proceedings of the 53rd ACL and 7th IJCNLP*, Beijing [[pdf](http://www.coli.uni-saarland.de/~jonasg/papers/sgraph-parsing-15.pdf)].
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUzODc1ODQ5NywtMTIyNDE4MTAyOF19
+eyJoaXN0b3J5IjpbLTEyMjQxODEwMjgsLTUzODc1ODQ5NywtMT
+IyNDE4MTAyOF19
 -->
