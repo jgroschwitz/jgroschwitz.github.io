@@ -20,3 +20,6 @@ Jonas Groschwitz, Alexander Koller and Mark Johnson, **Efficient techniques for 
 ###2015
 
 Jonas Groschwitz, Alexander Koller and Christoph Teichmann, **Graph parsing with s-graph grammars**. In *Proceedings of the 53rd ACL and 7th IJCNLP*, Beijing [[pdf](http://www.coli.uni-saarland.de/~jonasg/papers/sgraph-parsing-15.pdf)].
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTEyMjQxODEwMjhdfQ==
+-->
