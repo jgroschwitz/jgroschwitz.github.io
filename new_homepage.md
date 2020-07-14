@@ -22,7 +22,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-* **Jonas Groschwitz** (2019) [Link](http://www.coli.uni-saarland.de/~jonasg/thesis.pdf) PhD thesis, , Saarland University and Macquarie University
+* **[Jonas Groschwitz** (2019), PhD thesis](http://www.coli.uni-saarland.de/~jonasg/thesis.pdf), *Methods for taking semantic graphs apart and putting them back together again*,, Saarland University and Macquarie University
 
 ## Publications
 
@@ -71,5 +71,5 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA5NTUwNTkwMyw2Nzc3OTA4NjVdfQ==
+eyJoaXN0b3J5IjpbLTkxODg5NzAxMCw2Nzc3OTA4NjVdfQ==
 -->
