@@ -11,12 +11,12 @@ Location: Room 1.03 in Building C7.2
 
 ## About me
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+I'm a PostDoc at Saarland University in the group of Alexander Koller.
 
 
 ## Research Interests
 
-Generally speaking, I am interested in 
+Generally speaking, I am interested in the intersection of symbolic and neural methods. Specifically, 
 
 ## PhD Thesis
 
@@ -73,5 +73,5 @@ Consequently, the thesis focuses on terms for semantic representations, which ar
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExODQ3NDg2NTIsNjc3NzkwODY1XX0=
+eyJoaXN0b3J5IjpbLTIyMjI1NDI5MSw2Nzc3OTA4NjVdfQ==
 -->
