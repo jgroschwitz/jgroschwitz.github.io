@@ -2,7 +2,7 @@
 
 <img align= right width=300 src="http://www.coli.uni-saarland.de/~jonasg/profile.jpg" alt="That's me"/>
 
-[Google Scholar](https://scholar.google.com/citations?user=T6vXIdwAAAAJ) | [Semantics Scholar](https://www.semanticscholar.org/author/Jonas-Groschwitz/2960997) | CV
+[Google Scholar](https://scholar.google.com/citations?user=T6vXIdwAAAAJ) | [Semantics Scholar](https://www.semanticscholar.org/author/Jonas-Groschwitz/2960997) | [CV](http://www.coli.uni-saarland.de/~jonasg/CV_Eng.pdf)) 
 
 
 Email: jonasg (Klammeraffe) coli.uni-saarland.de
@@ -71,5 +71,5 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjc3NzkwODY1XX0=
+eyJoaXN0b3J5IjpbLTI2Mzg0NzQ5Myw2Nzc3OTA4NjVdfQ==
 -->
