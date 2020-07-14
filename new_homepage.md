@@ -13,9 +13,6 @@ Location: Room 1.03 in Building C7.2
 
 I'm a PostDoc at Saarland University in the group of Alexander Koller. I'm a computational linguisLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt but also a mathematician (and I'm afraid it might show sometimes). Welcome to my humble online home!
 
-t ut esearch nterests ad .
-
-* **Jona
 ## Research Interests
 
 Generally speaking, I am interested in the intersection of symbolic and neural methods. Specifically, I spent my PhD developing a new algebra for semantic composition (the AM algebra) and a neural semantic graph parser that does not predict the semantic graph directly, but rather an *AM dependency tree* that serves as a compositional structure, constructing the graph from its lexical parts. And it [works](https://www.aclweb.org/anthology/P19-1450/)!
@@ -86,6 +83,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc5NDM3Mzc3OSwxMjg4MjAzOTg1LDY3Nz
-c5MDg2NV19
+eyJoaXN0b3J5IjpbNzEzODU4MjQwLDE3OTQzNzM3NzksMTI4OD
+IwMzk4NSw2Nzc3OTA4NjVdfQ==
 -->
