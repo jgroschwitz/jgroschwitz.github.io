@@ -16,7 +16,7 @@ I'm a PostDoc at Saarland University in the group of Alexander Koller. I'm a com
 
 ## Research Interests
 
-Generally speaking, I am interested in the intersection of symbolic and neural methods. Specifically, I spent my PhD developing a new algebra for semantic composition (the AM algebra) and a neural semantic graph parser that does not predict the semantic graph directly, but rather an *AM dependency tree* that serves as a compositional structure, constructing the graph from its lexical parts.
+Generally speaking, I am interested in the intersection of symbolic and neural methods. Specifically, I spent my PhD developing a new algebra for semantic composition (the AM algebra) and a neural semantic graph parser that does not predict the semantic graph directly, but rather an *AM dependency tree* that serves as a compositional structure, constructing the graph from its lexical parts. And it works!
 
 Current research interests include compositional methods for natural language generation, as well as semi- and unsupervised methods for learning symbolic latent variables.
 
@@ -75,5 +75,5 @@ Consequently, the thesis focuses on terms for semantic representations, which ar
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAyMjYyNzE0Nyw2Nzc3OTA4NjVdfQ==
+eyJoaXN0b3J5IjpbLTE1Nzc1NjQ1NTQsNjc3NzkwODY1XX0=
 -->
