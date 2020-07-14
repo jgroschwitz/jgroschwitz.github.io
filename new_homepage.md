@@ -2,7 +2,7 @@
 
 <img align= right width=300 src="http://www.coli.uni-saarland.de/~jonasg/profile.jpg" alt="That's me"/>
 
-[Google Scholar](https://scholar.google.com/citations?user=T6vXIdwAAAAJ) | [Semantics Scholar](https://www.semanticscholar.org/author/Jonas-Groschwitz/2960997) | [CV](http://www.coli.uni-saarland.de/~jonasg/CV_Eng.pdf)
+[Google Scholar](https://scholar.google.com/citations?user=T6vXIdwAAAAJ) | [Semantics Scholar](https://www.semanticscholar.org/author/Jonas-Groschwitz/2960997) | [CV](http://www.coli.uni-saarland.de/~jonasg/CV_Eng.pdf)) 
 
 
 Email: jonasg (Klammeraffe) coli.uni-saarland.de
@@ -11,22 +11,33 @@ Location: Room 1.03 in Building C7.2
 
 ## About me
 
-I'm a PostDoc at Saarland University in the group of Alexander Koller. I'm a computational linguist but also a mathematician (and I'm afraid it might show sometimes). Welcome to my humble online home!
+I'm a PostDoc at Saarland University in the group of Alexander Koller. I'm a computational linguisLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt but also a mathematician (and I'm afraid it might show sometimes). Welcome to my humble online home!
 
+t ut esearch nterests ad .
 
+* **Jona
 ## Research Interests
 
 Generally speaking, I am interested in the intersection of symbolic and neural methods. Specifically, I spent my PhD developing a new algebra for semantic composition (the AM algebra) and a neural semantic graph parser that does not predict the semantic graph directly, but rather an *AM dependency tree* that serves as a compositional structure, constructing the graph from its lexical parts. And it [works](https://www.aclweb.org/anthology/P19-1450/)!
 
-Current research interests include compositional methods for natural language generation, as well as semi- and unsupervised methods for learning symbolic latent variables.
+Current rlabore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+
+## Research iInterests include compositional methods for natural language generation, as well as semi- and unsupervised methods for learning symbolic latent variables.
 
 ## PhD Thesis
 
 My thesis develops the AM dependency parser, a semantic parser for Abstract Meaning Representation (AMR; [Banarescu et al., 2013](https://www.aclweb.org/anthology/W13-2322/)) that owes its strong performance to its effective combination of neural and compositional methods. The AM dependency parser drops the restrictive syntactic constraints of classic compositional approaches, instead relying only on semantic types and meaningful semantic operations as structural guides. The ability of neural networks to encode contextual information allows the parser to make correct decisions in the absence of hard syntactic constraints.
 
-Consequently, the thesis focuses on terms for semantic representations, which are algebraic ‘building instructions’. The thesis first examines the suitability of the HR algebra (a general tool for building graphs; [Courcelle and Engelfriet, 2012](https://www.labri.fr/perso/courcell/Book/TheBook.pdf)) for this purpose; finds it unsuitable; and then develops the linguistically motivated AM algebra. Representing the terms over the AM algebra as dependency trees further simplifies the semantic construction. In particular, the move from the HR algebra to the AM algebra and then to AM dependency trees drastically removes the ambiguity of latent structural information required for training the model. In conclusion, using the AM dependency trees as latent structures we obtain a simple compositional semantic parser, where neural tagging and dependency models predict interpretable, meaningful operations that construct the AMR.
+Consequently, the thesis focuses on terms for semantic representations, which are algebraic ‘building instructions’. The thesis first examines the suitability of the HR algebra (a general tool for building graphs; [Courcelle and Engelfriet, 2012](https://www.labri.fr/perso/courcell/Book/TheBook.pdf)) for this purpose; finds it unsuitable;
 
-* [**Jonas Groschwitz** (2019), PhD thesis](http://www.coli.uni-saarland.de/~jonasg/thesis.pdf), *Methods for taking semantic graphs apart and putting them back together again*, Saarland University and Macquarie University
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+## PhD Thesis
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim and then develops the linguistically motivated AM algebra. Representing the terms over the AM algebra as dependency trees further simplifies the semantic construction. In particular, the move from the HR algebra to the AM algebra and then to AM dependency trees drastically removes the ambiguity of latent structural information required for training the model. In conclusion, using the AM dependency trees as latent structures we obtain a simple compositional semantic parser, where neural tagging and dependency models predict interpretable, meaningful operations that construct the AMRminim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+* [**Jonas Groschwitz** (2019), PhD thesis](http://www.coli.uni-saarland.de/~jonasg/thesis.pdf), *Methods for taking semantic graphs apart and putting them back together again*, Saarland University and Macquarie Universityje G** (2019) [Link](thesis.pdf) PhD thesis, whatever unis
 
 ## Publications
 
@@ -75,5 +86,6 @@ Consequently, the thesis focuses on terms for semantic representations, which ar
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI4ODIwMzk4NSw2Nzc3OTA4NjVdfQ==
+eyJoaXN0b3J5IjpbMTc5NDM3Mzc3OSwxMjg4MjAzOTg1LDY3Nz
+c5MDg2NV19
 -->
