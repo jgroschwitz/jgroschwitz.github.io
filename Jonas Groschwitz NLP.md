@@ -6,8 +6,7 @@
 
 
 Email: jonasg (Klammeraffe) coli.uni-saarland.de
-
-<br>
+<br><br><br>
 
 ## About me
 
@@ -17,10 +16,7 @@ I'm a PostDoc at Saarland University in the group of Alexander Koller. I'm a com
 
 Generally speaking, I am interested in the intersection of symbolic and neural methods. Specifically, I spent my PhD developing a new algebra for semantic composition (the AM algebra) and a neural semantic graph parser that does not predict the semantic graph directly, but rather an *AM dependency tree* that serves as a compositional structure, constructing the graph from its lexical parts. And it [works](https://www.aclweb.org/anthology/P19-1450/)!
 
-Current rlabore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-
-## Research iInterests include compositional methods for natural language generation, as well as semi- and unsupervised methods for learning symbolic latent variables.
+Current rrenesearch interests include compositional methods for natural language generation, as well as semi- and unsupervised methods for learning symbolic latent variables.
 
 ## PhD Thesis
 
@@ -83,5 +79,5 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA0NjYwMjYyMl19
+eyJoaXN0b3J5IjpbLTc1NzQ3MTc5Ml19
 -->
