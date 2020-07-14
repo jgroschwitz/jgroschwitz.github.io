@@ -11,7 +11,7 @@ Location: Room 1.03 in Building C7.2
 
 ## About me
 
-I'm a PostDoc at Saarland University in the group of Alexander Koller. 
+I'm a PostDoc at Saarland University in the group of Alexander Koller. I'm a computational linguist but also a mathematician (and I'm afraid it might show sometimes). Welcome to my humble online home!
 
 
 ## Research Interests
@@ -75,5 +75,5 @@ Consequently, the thesis focuses on terms for semantic representations, which ar
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMyODQ5NDM5NCw2Nzc3OTA4NjVdfQ==
+eyJoaXN0b3J5IjpbMjAyMjYyNzE0Nyw2Nzc3OTA4NjVdfQ==
 -->
