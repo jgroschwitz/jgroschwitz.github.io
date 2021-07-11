@@ -39,6 +39,8 @@ Consequently, the thesis focuses on terms for semantic representations, which ar
 
 * Lindemann, M., **Groschwitz, J.**, & Koller, A. (2020). [Fast semantic parsing with well-typedness guarantees](https://aclanthology.org/2020.emnlp-main.323/)  In *Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)* (pp. 3929-3951).
 
+	> AM dependency parsing [...] relies on a type system that models semantic valency but makes existing parsers slow. We describe an A* parser and a transition-based parser for AM dependency parsing which guarantee well-typedness and improve parsing speed by up to 3 orders of magnitude, while maintaining or improving accuracy.
+
 ### 2019
 
 * Donatelli, L., Fowlie, M., **Groschwitz, J.**, Koller, A., Lindemann, M., Mina, M., & Weißenhorn, P. (2019). [Saarland at MRP 2019: Compositional parsing across all graphbanks](https://www.aclweb.org/anthology/K19-2006/) . In *Proceedings of the Shared Task on Cross-Framework Meaning Representation Parsing at the 2019 Conference on Natural Language Learning *(pp. 66-75).
