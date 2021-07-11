@@ -10,7 +10,7 @@ Email: jonasg (Klammeraffe) coli.uni-saarland.de
 
 ## About me
 
-I'm a PostDoc at Saarland University in the group of Alexander Koller. I'm a computational linguist but also a mathematician (and I'm afraid it might show sometimes). Welcome to my humble online home!
+Unitl recently I was a PostDoc at Saarland University in the group of Alexander Koller; now I'm looking for employment opportunities for 2022! I'm a computational linguist but also a mathematician (and I'm afraid it might show sometimes). Welcome to my humble online home!
 
 ## Research Interests
 
@@ -27,6 +27,17 @@ Consequently, the thesis focuses on terms for semantic representations, which ar
 * [**Jonas Groschwitz** (2019), PhD thesis](http://www.coli.uni-saarland.de/~jonasg/thesis.pdf), *Methods for taking semantic graphs apart and putting them back together again*, Saarland University and Macquarie University
 
 ## Publications
+
+
+### 2021
+
+* **Groschwitz, J.**, Fowlie, M., Koller, A. (2021) [Learning compositional structures for semantic graph parsing](https://arxiv.org/abs/2106.04398) . Upcoming at the *5th Workshop on Structured Prediction for NLP.* (co-located with ACL 2021)
+
+### 2020
+
+* Donatelli, L., **Groschwitz, J.**, Koller, A., Lindemann, M., & Weißenhorn, P. (2020). [Normalizing Compositional Structures Across Graphbanks](https://aclanthology.org/2020.coling-main.267/) . In *Proceedings of the 28th International Conference on Computational Linguistics* (CoLing 2020) (pp. 2991-3006).
+
+* Lindemann, M., **Groschwitz, J.**, & Koller, A. (2020). [Fast semantic parsing with well-typedness guarantees](https://aclanthology.org/2020.emnlp-main.323/)  In *Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)* (pp. 3929-3951).
 
 ### 2019
 
