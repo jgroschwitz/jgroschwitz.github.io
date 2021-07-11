@@ -31,11 +31,16 @@ Consequently, the thesis focuses on terms for semantic representations, which ar
 
 ### 2021
 
-* **Groschwitz, J.**, Fowlie, M., Koller, A. (2021) [Learning compositional structures for semantic graph parsing](https://arxiv.org/abs/2106.04398) . Upcoming at the *5th Workshop on Structured Prediction for NLP.* (co-located with ACL 2021)
+* **Groschwitz, J.**, Fowlie, M., Koller, A. (2021). [Learning compositional structures for semantic graph parsing](https://arxiv.org/abs/2106.04398) . Upcoming at the *5th Workshop on Structured Prediction for NLP* (co-located with ACL 2021).
+
+	> AM dependency parsing is a method for neural semantic graph parsing that exploits the principle of compositionality. While AM dependency parsers have been shown to be fast and accurate across several graphbanks, they require explicit annotations of the compositional tree structures for training. In the past, these were obtained using complex graphbank-specific heuristics written by experts. Here we show how they can instead be trained directly on the graphs with a neural latent-variable model, drastically reducing the amount and complexity of manual heuristics. We demonstrate that our model picks up on several linguistic phenomena on its own and achieves comparable accuracy to supervised training, greatly facilitating the use of AM dependency parsing for new sembanks.
+
 
 ### 2020
 
 * Donatelli, L., **Groschwitz, J.**, Koller, A., Lindemann, M., & Weißenhorn, P. (2020). [Normalizing Compositional Structures Across Graphbanks](https://aclanthology.org/2020.coling-main.267/) . In *Proceedings of the 28th International Conference on Computational Linguistics* (CoLing 2020) (pp. 2991-3006).
+
+	> [...] We present a methodology for normalizing discrepancies between meaning representations (MRs) at the compositional level, finding that we can normalize the majority of divergent phenomena using linguistically-grounded rules. Our work significantly increases the match in compositional structure between MRs and improves multi-task learning (MTL) in a low-resource setting, serving as a proof of concept for future broad-scale cross-MR normalization.
 
 * Lindemann, M., **Groschwitz, J.**, & Koller, A. (2020). [Fast semantic parsing with well-typedness guarantees](https://aclanthology.org/2020.emnlp-main.323/)  In *Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)* (pp. 3929-3951).
 
@@ -44,6 +49,7 @@ Consequently, the thesis focuses on terms for semantic representations, which ar
 ### 2019
 
 * Donatelli, L., Fowlie, M., **Groschwitz, J.**, Koller, A., Lindemann, M., Mina, M., & Weißenhorn, P. (2019). [Saarland at MRP 2019: Compositional parsing across all graphbanks](https://www.aclweb.org/anthology/K19-2006/) . In *Proceedings of the Shared Task on Cross-Framework Meaning Representation Parsing at the 2019 Conference on Natural Language Learning *(pp. 66-75).
+
 
 * Lindemann, M., **Groschwitz, J.**, & Koller, A. (2019). [Compositional Semantic Parsing across Graphbanks.](https://www.aclweb.org/anthology/P19-1450/)  In *Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics* (ACL 57) (pp. 4576-4585).
 
