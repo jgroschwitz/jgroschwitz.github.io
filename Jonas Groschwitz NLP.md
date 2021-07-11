@@ -92,5 +92,5 @@ Consequently, the thesis focuses on terms for semantic representations, which ar
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNjY4OTI1MzddfQ==
+eyJoaXN0b3J5IjpbLTQzODY3OTMxMiwtMTI2Njg5MjUzN119
 -->
