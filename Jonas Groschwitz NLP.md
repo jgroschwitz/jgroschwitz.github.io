@@ -10,7 +10,7 @@ Email: jonasg (Klammeraffe) coli.uni-saarland.de
 
 ## About me
 
-Until recently I have been a PostDoc at Saarland University in the group of Alexander Koller; now I'm looking for employment opportunities for 2022! I'm a computational linguist but also a mathematician (and I'm afraid it might show sometimes). Welcome to my humble online home!
+I'm a computational linguist but also a mathematician (and I'm afraid it might show sometimes). Welcome to my humble online home! Until recently I have been a PostDoc at Saarland University in the group of Alexander Koller; I will soon start a project on language generation for which I have received funding from the DFG.
 
 ## Research Interests
 
@@ -92,6 +92,6 @@ Consequently, the thesis focuses on terms for semantic representations, which ar
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNDE0OTc0NjEsLTEyNjY4OTI1MzddfQ
-==
+eyJoaXN0b3J5IjpbNDQzOTg2ODYxLC0yMDQxNDk3NDYxLC0xMj
+Y2ODkyNTM3XX0=
 -->
