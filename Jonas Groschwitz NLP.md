@@ -33,7 +33,7 @@ Consequently, the thesis focuses on terms for semantic representations, which ar
 
 ### 2021
 
-* **Groschwitz, J.**, Fowlie, M., Koller, A. (2021). [Learning compositional structures for semantic graph parsing](https://arxiv.org/abs/2106.04398) . Upcoming at the *5th Workshop on Structured Prediction for NLP* (co-located with ACL 2021).
+* **Groschwitz, J.**, Fowlie, M., Koller, A. (2021). [Learning compositional structures for semantic graph parsing](https://arxiv.org/abs/2106.04398) . *5th Workshop on Structured Prediction for NLP* (co-located with ACL 2021).
 
 	> AM dependency parsing is a method for neural semantic graph parsing that exploits the principle of compositionality. While AM dependency parsers have been shown to be fast and accurate across several graphbanks, they require explicit annotations of the compositional tree structures for training. In the past, these were obtained using complex graphbank-specific heuristics written by experts. Here we show how they can instead be trained directly on the graphs with a neural latent-variable model, drastically reducing the amount and complexity of manual heuristics. We demonstrate that our model picks up on several linguistic phenomena on its own and achieves comparable accuracy to supervised training, greatly facilitating the use of AM dependency parsing for new sembanks.
 
