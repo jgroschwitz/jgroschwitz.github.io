@@ -10,7 +10,7 @@ Email: jonasg (Klammeraffe) coli.uni-saarland.de
 
 ## About me
 
-I'm a computational linguist but also a mathematician (and I'm afraid it might show sometimes). Welcome to my humble online home! Until recently I have been a PostDoc at Saarland University in the group of Alexander Koller; I will soon start a project on language generation for which I have received funding from the DFG.
+I'm a computational linguist but also a mathematician (and I'm afraid it might show sometimes). Welcome to my humble online home! I am currently a recipient of a Walter Benjamin fellowship of the DFG
 
 ## Research Interests
 
@@ -92,5 +92,5 @@ Consequently, the thesis focuses on terms for semantic representations, which ar
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDQzOTg2ODYxXX0=
+eyJoaXN0b3J5IjpbMTA2NzM3NzUwMCw0NDM5ODY4NjFdfQ==
 -->
