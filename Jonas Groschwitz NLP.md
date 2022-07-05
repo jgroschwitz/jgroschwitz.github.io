@@ -10,7 +10,9 @@ Email: jonasg (Klammeraffe) coli.uni-saarland.de
 
 ## About me
 
-I'm a computational linguist but also a mathematician (and I'm afraid it might show sometimes). Welcome to my humble online home! I am currently a recipient of a DFG Walter Benjamin fellowship for a project on neurosymbolic graph-to-text generation. As part of that, I am spending a year at Edinburgh University; this will
+I'm a computational linguist but also a mathematician (and I'm afraid it might show sometimes). Welcome to my humble online home!
+
+I am currently a recipient of a DFG Walter Benjamin fellowship for a project on neurosymbolic graph-to-text generation. As part of that, I am spending a year at Edinburgh University; this will be followed by a year at the University of Amsterdam.
 
 ## Research Interests
 
@@ -92,5 +94,5 @@ Consequently, the thesis focuses on terms for semantic representations, which ar
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI5ODg0Mjc2Nyw0NDM5ODY4NjFdfQ==
+eyJoaXN0b3J5IjpbNzkwMjQ3ODEwLDQ0Mzk4Njg2MV19
 -->
