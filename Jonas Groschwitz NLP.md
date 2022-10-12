@@ -5,7 +5,7 @@
 [Google Scholar](https://scholar.google.com/citations?user=T6vXIdwAAAAJ) | [Semantics Scholar](https://www.semanticscholar.org/author/Jonas-Groschwitz/2960997) | [CV](http://www.coli.uni-saarland.de/~jonasg/CV_Eng.pdf)
 
 
-Email: v1jgrosc (Klammeraffe) exsee
+Email: v1jgrosc (Klammeraffe) exseed.ed.ac.uk
 <br><br><br>
 
 ## About me
@@ -94,6 +94,5 @@ Consequently, the thesis focuses on terms for semantic representations, which ar
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyOTgxMjI0NzIsLTE1NTAwNjA5MzZdfQ
-==
+eyJoaXN0b3J5IjpbMTMxNTM3MzcyMywtMTU1MDA2MDkzNl19
 -->
