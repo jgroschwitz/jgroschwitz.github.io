@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jonas Groschwitz Computational Linguistics</title>
+    <link rel="stylesheet" href="https://stackedit.io/style.css">
+    <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet" href="navbar.css">
+</head>
+
+<script src="navbar.js"></script>
+<body class="stackedit" onload="fetch_header()">
+	<div id="header"></div>
+	
+  <div class="body-container"><h1 id="heading-top">Academic Research</h1>
+<h2 id="research-interests">Research Interests</h2>
+<p>Generally speaking, I am interested in the intersection of symbolic and neural methods. Specifically, I spent my PhD developing a new algebra for semantic composition (the AM algebra) and a neural semantic graph parser that does not predict the semantic graph directly, but rather an <em>AM dependency tree</em> that serves as a compositional structure, constructing the graph from its lexical parts. And it <a href="https://www.aclweb.org/anthology/P19-1450/">works</a>!</p>
+<p>Current research interests include compositional methods for natural language generation, as well as semi- and unsupervised methods for learning symbolic latent variables. My favourite thing about research is to look at a model in detail, especially by how it handles certain examples, and thereby better understand how it works.</p>
+<h2 id="phd-thesis">PhD Thesis</h2>
+<p>My thesis develops the AM dependency parser, a semantic parser for Abstract Meaning Representation (AMR; <a href="https://www.aclweb.org/anthology/W13-2322/">Banarescu et al., 2013</a>) that owes its strong performance to its effective combination of neural and compositional methods. The AM dependency parser drops the restrictive syntactic constraints of classic compositional approaches, instead relying only on semantic types and meaningful semantic operations as structural guides. The ability of neural networks to encode contextual information allows the parser to make correct decisions in the absence of hard syntactic constraints.</p>
+<p>Consequently, the thesis focuses on terms for semantic representations, which are algebraic ‘building instructions’. The thesis first examines the HR algebra (a general tool for building graphs; <a href="https://www.labri.fr/perso/courcell/Book/TheBook.pdf">Courcelle and Engelfriet, 2012</a>) for this purpose; finds it creates too many latent terms to use in practice; and then develops the linguistically motivated AM algebra. Representing the terms over the AM algebra as dependency trees further simplifies the semantic construction. In particular, the move from the HR algebra to the AM algebra and then to AM dependency trees drastically removes the ambiguity of latent structural information required for training the model. In conclusion, using the AM dependency trees as latent structures we obtain a simple compositional semantic parser, where neural tagging and dependency models predict interpretable, meaningful operations that construct the AMR.</p>
+<ul>
+<li><a href="http://www.coli.uni-saarland.de/~jonasg/thesis.pdf"><strong>Jonas Groschwitz</strong> (2019), PhD thesis</a>, <em>Methods for taking semantic graphs apart and putting them back together again</em>, Saarland University and Macquarie University</li>
+</ul>
+<h2 id="publications">Publications</h2>
+<h3 id="section">2023</h3>
+<ul>
+<li>
+<p><strong>Groschwitz, J.</strong> (2023). <a href="https://aclanthology.org/2023.blackboxnlp-1.15/">Introducing VULCAN: A Visualization Tool for Understanding Our Models and Data by Example</a> . <em>6th BlackboxNLP Workshop: Analyzing and Interpreting Neural Networks for NLP</em>.</p>
+<blockquote>
+<p>Examples are a powerful tool that help us understand complex concepts and connections. In computational linguistics research, looking at example system output and example corpus entries can offer a wealth of insights that are not otherwise accessible. This paper describes the open-source software VULCAN, a visualization tool for strings, graphs, trees, alignments, attention and more. VULCAN’s unique ability to visualize both linguistic structures and properties of neural models make it particularly relevant for neuro-symbolic models. Neuro-symbolic models, combining neural networks with often linguistically grounded structures, offer a promise of increased interpretability in an age of purely neural black-box end-to-end models. VULCAN aims to facilitate this interpretability in practice. VULCAN is designed to be both easy to use and powerful in its capabilities.
+</p>
+</blockquote>
+</li>
+<li>
+<p><strong>Groschwitz, J.</strong>, Cohen, S., Donatelli, L., Fowlie, M. (2023). <a href="https://aclanthology.org/2023.emnlp-main.662/">AMR Parsing is Far from Solved: GrAPES, the Granular AMR Parsing Evaluation Suite</a> . <em>Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing (EMNLP)</em>.</p>
+<blockquote>
+<p>We present the Granular AMR Parsing Evaluation Suite (GrAPES), a challenge set for Abstract Meaning Representation (AMR) parsing with accompanying evaluation metrics. AMR parsers now obtain high scores on the standard AMR evaluation metric Smatch, close to or even above reported inter-annotator agreement. But that does not mean that AMR parsing is solved; in fact, human evaluation in previous work indicates that current parsers still quite frequently make errors on node labels or graph structure that substantially distort sentence meaning. Here, we provide an evaluation suite that tests AMR parsers on a range of phenomena of practical, technical, and linguistic interest. Our 36 categories range from seen and unseen labels, to structural generalization, to coreference. GrAPES reveals in depth the abilities and shortcomings of current AMR parsers.
+</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="section">2021</h3>
+<ul>
+<li>
+<p><strong>Groschwitz, J.</strong>, Fowlie, M., Koller, A. (2021). <a href="https://arxiv.org/abs/2106.04398">Learning compositional structures for semantic graph parsing</a> . <em>5th Workshop on Structured Prediction for NLP</em> (co-located with ACL 2021).</p>
+<blockquote>
+<p>AM dependency parsing is a method for neural semantic graph parsing that exploits the principle of compositionality. While AM dependency parsers have been shown to be fast and accurate across several graphbanks, they require explicit annotations of the compositional tree structures for training. In the past, these were obtained using complex graphbank-specific heuristics written by experts. Here we show how they can instead be trained directly on the graphs with a neural latent-variable model, drastically reducing the amount and complexity of manual heuristics. We demonstrate that our model picks up on several linguistic phenomena on its own and achieves comparable accuracy to supervised training, greatly facilitating the use of AM dependency parsing for new sembanks.</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="section-1">2020</h3>
+<ul>
+<li>
+<p>Donatelli, L., <strong>Groschwitz, J.</strong>, Koller, A., Lindemann, M., &amp; Weißenhorn, P. (2020). <a href="https://aclanthology.org/2020.coling-main.267/">Normalizing Compositional Structures Across Graphbanks</a> . In <em>Proceedings of the 28th International Conference on Computational Linguistics</em> (CoLing 2020) (pp. 2991-3006).</p>
+<blockquote>
+<p>[…] We present a methodology for normalizing discrepancies between meaning representations (MRs) at the compositional level, finding that we can normalize the majority of divergent phenomena using linguistically-grounded rules. Our work significantly increases the match in compositional structure between MRs and improves multi-task learning (MTL) in a low-resource setting, serving as a proof of concept for future broad-scale cross-MR normalization.</p>
+</blockquote>
+</li>
+<li>
+<p>Lindemann, M., <strong>Groschwitz, J.</strong>, &amp; Koller, A. (2020). <a href="https://aclanthology.org/2020.emnlp-main.323/">Fast semantic parsing with well-typedness guarantees</a>  In <em>Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)</em> (pp. 3929-3951).</p>
+<blockquote>
+<p>AM dependency parsing […] relies on a type system that models semantic valency but makes existing parsers slow. We describe an A* parser and a transition-based parser for AM dependency parsing which guarantee well-typedness and improve parsing speed by up to 3 orders of magnitude, while maintaining or improving accuracy.</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="section-2">2019</h3>
+<ul>
+<li>
+<p>Donatelli, L., Fowlie, M., <strong>Groschwitz, J.</strong>, Koller, A., Lindemann, M., Mina, M., &amp; Weißenhorn, P. (2019). <a href="https://www.aclweb.org/anthology/K19-2006/">Saarland at MRP 2019: Compositional parsing across all graphbanks</a> . In *Proceedings of the Shared Task on Cross-Framework Meaning Representation Parsing at the 2019 Conference on Natural Language Learning *(pp. 66-75).</p>
+</li>
+<li>
+<p>Lindemann, M., <strong>Groschwitz, J.</strong>, &amp; Koller, A. (2019). <a href="https://www.aclweb.org/anthology/P19-1450/">Compositional Semantic Parsing across Graphbanks.</a>  In <em>Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics</em> (ACL 57) (pp. 4576-4585).</p>
+<blockquote>
+<p>Most semantic parsers that map sentences to graph-based meaning representations are hand-designed for specific graphbanks. We present a compositional neural semantic parser which achieves, for the first time, competitive accuracies across a diverse range of graphbanks. Incorporating BERT embeddings and multi-task learning improves the accuracy further, setting new states of the art on DM, PAS, PSD, AMR 2015 and EDS.</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="section-3">2018</h3>
+<ul>
+<li>
+<p><strong>Jonas Groschwitz</strong>, Matthias Lindemann, Meaghan Fowlie, Mark Johnson, and Alexander Koller. <a href="https://www.aclweb.org/anthology/P18-1170/">AMR Dependency Parsing with a Typed Semantic Algebra</a> . In <em>Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics</em> (ACL), Melbourne</p>
+<blockquote>
+<p>We present a semantic parser for Abstract Meaning Representations which learns to parse strings into tree representations of the compositional structure of an AMR graph. This allows us to use standard neural techniques for supertagging and dependency tree parsing, constrained by a linguistically principled type system. We present two approximative decoding algorithms, which achieve state-of-the-art accuracy and outperform strong baselines.</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="section-4">2017</h3>
+<ul>
+<li>
+<p><strong>Jonas Groschwitz</strong>, Meaghan Fowlie, Mark Johnson, and Alexander Koller.<a href="https://www.aclweb.org/anthology/W17-6810/"> A constrained graph algebra for semantic parsing with AMRs.</a>  In <em>Proceedings of the 12th International Conference on Computational Semantics</em> (IWCS), Montpellier.</p>
+</li>
+<li>
+<p>Teichmann, C., Koller, A., &amp; <strong>Groschwitz, J</strong>. (2017)).<a href="https://www.aclweb.org/anthology/W17-6317/">Coarse-to-fine parsing for expressive grammar formalisms.</a>  In Proceedings of the 15th International Conference on Parsing Technologies (pp. 122-127).</p>
+<blockquote>
+<p>We generalize coarse-to-fine parsing to grammar formalisms that are more expressive than PCFGs and/or describe languages of trees or graphs. We evaluate our algorithm on PCFG, PTAG, and graph parsing. While we achieve the expected performance gains on PCFGs, coarse-to-fine does not help for PTAG and can even slow down parsing for graphs. We discuss the implications of this finding.</p>
+</blockquote>
+</li>
+<li>
+<p><strong>Groschwitz, J.</strong> and Szabó, T. (2017) <a href="http://arxiv.org/abs/1602.04628">Sharp Thresholds for Half-Random Games II</a> Graphs and Combinatorics Volume 33, Issue 2, 1 March 2017, Pages 387-401</p>
+<blockquote>
+<p>We study biased Maker-Breaker positional games between two players, one of whom is playing randomly against an opponent with an optimal strategy. In this work we focus on the case of Breaker playing randomly and Maker being “clever”. The reverse scenario is treated in a separate paper. We determine the sharp threshold bias of classical games played on the edge set of the complete graph Kn, such as connectivity, perfect matching, Hamiltonicity, and minimum degree-1 and -2. In all of these games, the threshold is equal to the trivial upper bound implied by the number of edges needed for Maker to occupy a winning set. Moreover, we show that CleverMaker can not only win against asymptotically optimal bias, but can do so very fast, wasting only logarithmically many moves (while the winning set sizes are linear in n).</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="section-5">2016</h3>
+<ul>
+<li><strong>Jonas Groschwitz</strong>, Alexander Koller and Mark Johnson, <a href="https://www.aclweb.org/anthology/P16-1192/">Efficient techniques for parsing with tree automata.</a>  In Proceedings of the 54th Annual Meeting of the Association for Computational Linguistics (ACL), Berlin.</li>
+</ul>
+<h3 id="section-6">2015</h3>
+<ul>
+<li>
+<p><strong>Jonas Groschwitz</strong>, Alexander Koller and Christoph Teichmann, <a href="https://www.aclweb.org/anthology/P15-1143/">Graph parsing with s-graph grammars</a>. In <em>Proceedings of the 53rd Annual Meeting of the Association for Computational Linguistics and the 7th International Joint Conference on Natural Language Processing</em> (Volume 1: Long Papers) (pp. 1481-1490).)</p>
+<blockquote>
+<p>A  key  problem  in  semantic  parsing  withgraph-based  semantic  representations  isgraph  parsing,   i.e.  computing  all  pos-sible  analyses  of  a  given  graph  accord-ing  to  a  grammar.    This  problem  arisesin   training   synchronous   string-to-graphgrammars,  and  when  generating  stringsfrom them. We present two algorithms forgraph  parsing  (bottom-up  and  top-down)with  s-graph  grammars.    On  the  relatedproblem of graph parsing with hyperedgereplacement  grammars,  our  implementa-tions outperform the best previous systemby several orders of magnitude.</p>
+</blockquote>
+</li>
+<li>
+<p><strong>Groschwitz, J.</strong> and Szabó, T. (2016), Sharp thresholds for half‐random games I.<a href="https://arxiv.org/abs/1507.06688">Sharp thresholds for half‐random games I.</a>  Random Structures and Algorithms, 49: 766-794. doi:10.1002/rsa.20681</p>
+<blockquote>
+<p>We study biased Maker-Breaker positional games between two players, one of whom is playing randomly against an opponent with an optimal strategy. In this paper we consider the scenario when Maker plays randomly and Breaker is “clever”, and determine the sharp threshold bias of classical graph games, such as connectivity, Hamiltonicity, and minimum degree-k. We treat the other case, that is when Breaker plays randomly, in a separate paper. The traditional, deterministic version of these games, with two optimal players playing, are known to obey the so-called probabilistic intuition. That is, the threshold bias of these games is asymptotically equal to the threshold bias of their random counterpart, where players just take edges uniformly at random. We find, that despite this remarkably precise agreement of the results of the deterministic and the random games, playing randomly against an optimal opponent is not a good idea: the threshold bias tilts significantly more towards the random player. An important qualitative aspect of the probabilistic intuition carries through nevertheless: the bottleneck for Maker to occupy a connected graph is still the ability to avoid isolated vertices in her graph.</p>
+</blockquote>
+</li>
+</ul>
+</div>
+</body>
+
+</html>

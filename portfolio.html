@@ -4,20 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Science Portfolio</title>
+    <link rel="stylesheet" href="https://stackedit.io/style.css">
     <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet" href="navbar.css">
 </head>
-<body>
+
+<script src="navbar.js"></script>
+<body class="stackedit" onload="fetch_header()">
+	<div id="header"></div>
+	
     <div class="portfolio-container">
-        <div class="portfolio-tile" onclick="window.location.href='https://your-portfolio-item-link.com';">
+	<h1 id="heading-top">Data Science Portfolio</h1>
+	
+        <div class="portfolio-tile" onclick="window.location.href='portfolio/german-dialects.html';">
             <div class="portfolio-content">
-                <h2>Project Name 1</h2>
-                <p><strong>Topic:</strong> Topic Description</p>
-                <p><strong>Description:</strong> Brief description of the project.</p>
-                <p><strong>Tools Used:</strong> Python, Pandas, Scikit-learn</p>
-                <p><strong>Skills Highlighted:</strong> Data Analysis, Machine Learning</p>
+                <h2>Mapping German Dialect Data</h2>
+                <p><strong>Topic:</strong> Linguistics</p>
+                <p><strong>Description:</strong> Visualizing data from a dialect survey on a map of Germany.</p>
+                <p><strong>Tools:</strong> Tableau, Python</p>
+                <div>
+					<div style="display: inline-block; vertical-align:top;"><strong>Skills:</strong></div>
+					<div style="display: inline-block; max-width:400px; vertical-align:top;">
+					<ul style="margin:0px; margin-left: 20px">
+					  <li>Geographical visualization</li>
+					  <li>Data cleaning</li>
+					  <li>Using domain knowledge to improve the visualization</li>
+					  <li>Consulting with an expert</li>
+					</ul></div>
+				</div>
             </div>
             <div class="portfolio-image">
                 <img src="image1.jpg" alt="Project 1">
+            </div>
+        </div>
+
+        <div class="portfolio-tile" onclick="window.location.href='https://your-portfolio-item-link.com';">
+            <div class="portfolio-content">
+                <h2>Project Name 2</h2>
+                <p><strong>Topic:</strong> Topic Description</p>
+                <p><strong>Description:</strong> Brief description of the project.</p>
+                <p><strong>Tools Used:</strong> R, ggplot2, Shiny</p>
+                <p><strong>Skills Highlighted:</strong> Data Visualization, Dashboarding</p>
+            </div>
+            <div class="portfolio-image">
+                <img src="image2.jpg" alt="Project 2">
             </div>
         </div>
 
