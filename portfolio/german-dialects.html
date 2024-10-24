@@ -24,9 +24,13 @@
  <li>and optionally some example words where the sound occurs.</li>
 </ol>
 <p>In my visualization, I create maps that focus on one sound in standard German and display that sound's regional variation. For example, the figure on the right shows the regional pronunciations of <span class=ipa>/i/</span>, which is the so called <i>lax i</i> sound of German, used for short <i>i</i> sounds as in the German words "Wind" or "Kissen". All sounds such as <span class=ipa>/i/</span> are spelled here using the <a href="https://en.wikipedia.org/wiki/International_Phonetic_Alphabet">International Phonetic Alphabet (IPA)</a>. At each city for which the survey contains data for this sound, the map shows all recorded regional realizations in a pie chart. Similar regional sounds have similar colours (as explained below). Hovering over a segment of a pie chart shows the regional realization, city name and possible examples in a tooltip.</p>
-<p>Note that in each pie chart, each datapoint has the same weight. That is, the width of a slice of the pie is simply determined by how often that regional realization was recorded in the survey. Due to the small sample size of the survey, the pie charts should therefore not be interpreted as representing the prevalence of certain sounds in the overall population. Rather, the pie charts simply visualize the survey data. Further, the survey only recorded <em>deviations</em> from the standard pronunciations. Therefore, there are an unkown amount of occurrences where the local speaker actually used the standard pronunciation. These occurrences were not recorded in the survey, and are therefore also not present in the visualization.</p>
+<p>Note that in each pie chart, each datapoint has the same weight. That is, the width of a slice of the pie is simply determined by how often that regional realization was recorded in the survey. Due to the small sample size of the survey, the pie charts should therefore not be interpreted as representing the prevalence of certain sounds in the overall population. Rather, the pie charts simply visualize the survey data.</p>
 
-<div>
+<div style="background-color: #ecf ; padding: 10px; border: 1px solid purple;">
+<b>Data limitation:</b> The survey only recorded <em>deviations</em> from the standard pronunciations. Therefore, there are an unkown amount of occurrences where the local speaker actually used the standard pronunciation (e.g., the sound with standard reference <span class=ipa>/i/</span> has the local realization <span class=ipa>[i]</span>). These occurrences were not recorded in the survey, and are therefore also not present in the visualization.
+</div> 
+
+<div style="padding: 10px">
 	<div style="display: inline-block; vertical-align:top;"><strong>Data:</strong></div>
 	<div style="display: inline-block; max-width:600px; vertical-align:top;">
 	<ul style="margin:0px; margin-left: 20px">
@@ -43,17 +47,29 @@
 	</ul></div>
 </div>
 <h2 id="research-interests">Analysis</h2>
-<p>To analyze the data, I consulted with my friend Meaghan Fowlie, Assistant Professor at the Department of Linguistics at Utrecht University. We first looked at the local realizations of <span class=ipa>/i/</span>, i.e. lax i. One key observation here is that many of the local realizations form groups of two or three, that are changes in the same direction, just more or less extreme. For example, 
+<p>To analyze the data, I consulted with my friend Meaghan Fowlie, Assistant Professor at the Department of Linguistics at Utrecht University. We first looked at the local realizations of <span class=ipa>/i/</span>, i.e. lax i. One key observation here is that some of the local realizations, i.e. deviations from the standard language, are simlilar to each other: they are deviations in the same direction, just more or less extreme. For example, the sound <span class=ipa>[y]</span> is produced similarly to the sound <span class=ipa>[i]</span> (in terms of placement of the tounge etc.), but with rounded lips. The sound "<span class=ipa>[i]</span> with rounder lips" is inbetween <span class=ipa>[i]</span> and <span class=ipa>[y]</span> (i.e. <span class=ipa>[y]</span> has full lip rounding, and "<span class=ipa>[i]</span> with rounder lips" has partial rounding). Therefore, "<span class=ipa>[i]</span> with rounder lips" and <span class=ipa>[y]</span> are two similar deviations form the standard pronounciations, with <span class=ipa>[y]</span> simply being a more extreme case.
+</p>
+<p>
+Another example of this are the sounds "<span class=ipa>[i]</span> slightly centralized", <span class=ipa>[&#x0258]</span> and <span class=ipa>[&#x0259]</span>. They are all variants of <i>centralization</i>. When pronouncing the standard sound <span class=ipa>[i]</span>, the topmost part of the tongue, which is the crucial bit for pronunciation of vowels, is near the top and front of the mouth. In "<span class=ipa>[i]</span> slightly centralized", that topmost part of the tongue is slightly more towards the center of the mouth. In <span class=ipa>[&#x0258]</span>, it is even more towards the center and in <span class=ipa>[&#x0259]</span>, it is fully at the center. Thus, these three sounds form another gradient of the same kind of deviation, from slight to strong.
 </p>
 
 <div style="background-color: #cfc ; padding: 10px; border: 1px solid green;">
-<b>Visualization spotlight:</b> To make the visualization more intuitive and informative, I chose similar colors for similar realizations.
+<b>Visualization spotlight:</b> To make the visualization more intuitive and informative, I chose similar colors for similar deviations, using more intense colors for stronger deviations. For example, "<span class=ipa>[i]</span> slightly centralized", <span class=ipa>[&#x0258]</span> and <span class=ipa>[&#x0259]</span> are all purple, and the sounds with stronger centralization are a more intense purple. Similarly, "<span class=ipa>[i]</span> with rounder lips" and <span class=ipa>[y]</span> are both yellow, with <span class=ipa>[y]</span> more intense.
 </div> 
 
 <p>
-Some of what we found about /lax i/, such as parallels to dutch, some things widespread while some are rare. Limitations found, e.g. missing data for /t/ in swabian dialects (check missing locations)</p>
-<h2 id="research-interests">Improving the visualization using domain knowledge: choosing meaningful colours</h2>
-<p>Choice of colors, grouping /t/ elisions.</p>
+One observation here is that often, more extreme deviations are less widespread than more minor deviations. For example, "<span class=ipa>[i]</span> slightly centralized" is found in many parts of Germany, whereas <span class=ipa>[&#x0258]</span> is rarer, and <span class=ipa>[&#x0259]</span> is very rare, found only near Berlin. But this pattern does not always hold: "<span class=ipa>[i]</span> with rounder lips" and <span class=ipa>[y]</span> are both widespread.
+</p>
+
+<p>
+A well known fact from the history of German shows up in this data as well. Note first the prevalence of pronouncing <span class=ipa>/i/</span> as <span class=ipanosc>[e]</span> (dark red) in northern Germany. These are likely instances of "low German", an old German dialect in the north that used to form a dialect continuum with Dutch. Indeed in Dutch, a similar sound shift occurs: for example, German "Milch" (English: milk) is Dutch "melk".
+</p>
+
+<div style="background-color: #ecf ; padding: 10px; border: 1px solid purple;">
+<b>Data limitation:</b> Not all local realizations appear to be recorded in the dataset. For example, consider the realizations of the <span class=ipanosc>/t/</span> sound shown in Figure 2. Swabian, a common dialect spoken in Baden-Württemberg, the state in the very south west of Germany, uses the realization <span class=ipanosc>[d]</span> for many words. However, this is not recorded in the dataset.
+</div> 
+
+<p>
 <h2 id="research-interests">For nerds: cleaning and preparing the data</h2>
 <p>cleaning data, dealing with multiple sounds in one datapoint.</p>
 <h2 id="research-interests">Conclusion</h2>

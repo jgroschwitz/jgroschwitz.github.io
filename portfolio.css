@@ -28,6 +28,10 @@
 	font-family: "Times New Roman", Times, serif;
 }
 
+.ipanosc {
+	font-family: "Times New Roman", Times, serif;
+}
+
 .portfolio-tile:hover {
     transform: scale(1.02);
 }
