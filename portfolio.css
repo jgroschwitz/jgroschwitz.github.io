@@ -60,6 +60,11 @@
     display: block;
 }
 
+.padded-image {
+	float: right;
+	padding: 50px 50px 50px 50px;
+}
+
 @media screen and (max-width: 768px) {
     .portfolio-tile {
         flex-direction: column;
