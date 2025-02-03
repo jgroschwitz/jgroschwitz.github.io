@@ -27,9 +27,8 @@
 
 <h2 id="game-intro">A Brief Introduction to Ark Nova</h2>
 
-<img align="right" width="200" src="/portfolio/514.jpg" alt="The emu card in Ark Nova." style="margin:20px; margin-top:0px; margin-right: 0px;">  
-<img align="right" width="200" src="/portfolio/401.jpg" alt="The cheetah card in Ark Nova." style="margin:20px; margin-top:0px; margin-right: 0px;">  <!--clear: both-->
-<!--src="https://github.com/PixelT/ArkNovaCardsManager/blob/master/dist/images/animal/401.jpg"-->  
+<img align="right" width="200" src="https://raw.githubusercontent.com/PixelT/ArkNovaCardsManager/refs/heads/master/dist/images/animal/514.jpg" alt="The emu card in Ark Nova." style="margin:20px; margin-top:0px; margin-right: 0px;">  
+<img align="right" width="200" src="https://raw.githubusercontent.com/PixelT/ArkNovaCardsManager/refs/heads/master/dist/images/animal/401.jpg" alt="The cheetah card in Ark Nova." style="margin:20px; margin-top:0px; margin-right: 0px;">  <!--clear: both-->
 <p>Ark Nova is a 2-4 player board game where players build a zoo, trying to both attract visitors and contribute to wildlife conservation efforts. Each player starts with an empty map of their zoo, and the core game mechanic is to build enclosures and place animals inside them. The animals come in the form of cards, like the ones seen on the right. You can find a list of all Ark Nova cards for example <a href="https://ssimeonoff.github.io/ark-nova">here</a> or <a href="https://arknova.cards/">here</a>.
 </p>
 <p> Each animal has a <i>cost</i>, shown in the gray square on the top right (17 for the cheetah, and 22 for the emu). Each card has a range of different features that are either requirements to playing the card or benefits when you add the animal to your zoo. For example, there is the <i>minimum enclosure size</i> that the animal requires (the brown hexagon in the top left; here both animals require an enclosure of size 5). Also, on the bottom right, each animal has an <i>attraction</i> value shown on a ticket-like shape, that represents how many visitors the animal will attract to your zoo (here 6 and 7, respectively). Many animals also have special abilities printed in text on the card. For example, the cheetah allows you to draw three more cards, and the emu allows you to build a special kind of enclosure for free.
@@ -146,10 +145,11 @@ Some observations:
 <ul style="margin:0px; margin-left: 20px">
 	  <li>Each attraction point ("ticket") costs ~2.7. We can compare this to some abilities that give conditional tickets: The Pack ability costs 7.8, so on average you'll want ~2.9 tickets to get good value. The Icon ability costs a whopping 15.7, so you'll want on average 5.8 tickets for good value.</li>
 	  <li>Both the Scavenging and the Hunter ability let you draw a specified number of cards (let's call it X)but you only get to keep one. I modeled these with two features: one that models the number of cards you get to keep ("Hunter Keep", "Scavenging Keep"), i.e. that is always 1, and one that models the number of cards you get to look at ("Hunter Draw", "Scavenging Draw"), i.e. that is X. Interestingly, the Hunter Keep feature is about 0 and Hunter Draw is non-zero, while Scavenging Keep's cost is non-zero, but Scavenging Draw has near zero cost. This might just be an artifact of the model, but it could indicate that the number of cards you draw when hunting is more important than the number of cards you draw when scavenging.</li>
-	  <li>The most expensive ability is the Emu's ability to build the special bird cage for free. While that is a useful thing to get, 16 seems like a steep cost given that building it the normal way costs 10. Seems only worth it in specific conditions, like when you want to skip the building upgrade but really want to play some birds, or if you are short on actions.</li>
+	  <li>The most expensive ability is the Emu's ability to build the Large Bird Aviary for free. While that is a useful thing to get, 16 seems like a steep cost given that building the aviary the normal way costs 10. So the Emu seems only worth it in specific conditions, like when you want to skip the building upgrade but really want to play some birds, or if you are short on actions.</li>
 	  <li>We already saw that tickets cost 2.7. Conservation points cost 7.2. Using the board game arena convention of looking at tickets giving 1 point for the final score, and conservation points (usually) 3 points, and given that \(2.7*3=8.1\), conservation points on animals seem to be a bit better value for final points.</li>
 	  <li>The Inventive ability that gives you an X-marker is priced at 3.4. That's surprisingly low, given that the game usually prices X-markers at 5 (for example looking at the bonus fields you can pick up by building enclusures, or looking at the Trade ability in the Marine World expansion) or 4 (comparing the 3 X-markers and the 12 money reward for conservation projects). So getting X-markers from animals might be particularly good value.</li>
 	  <li>An extra animal symbol on the card costs 1.9, while an extra continent symbol costs 4.5. The discrepancy may be due to the fact that getting a partner zoo will give you extra reduction for the extra continent symbol.</li>
+	  <li>Interestingly, according to the model, each point of enclusure size is valued at -1.3, indicating a cost "already spent on the enclosure" of 1.3 per field, which is different from the actual cost of an enclosure of 2 per field. Essentially, this means that "larger" animals (the ones requiring larger enclosures) cost a bit more money than one would expect (the cost reduction based on enclosure size is smaller than expected). This may make sense from the following perspective: the cost of an animal consists not only of the money spent, but also on the gameplay actions spent. Larger animals are usually more efficient in terms of gameplay actions, so to balance this out, they are less efficient in terms of money. This "cost" of gameplay actions may also be reflected in the model's bias, which is negative. This indicates that there is a fixed external cost to each animal card that is not measurable in the animal's monetary cost or its features.</li>
 </ul>
 </div>
 
@@ -163,13 +163,16 @@ While our analysis here as limited value in comparing cards in terms of their st
 
 <h2 id="overpriced">Over- and Underpriced Animals?</h2>
 
-<div class='tableauPlaceholder' id='viz1738587873549' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ar&#47;ArcheNova&#47;OverUndercostedanimals&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='ArcheNova&#47;OverUndercostedanimals' /><param name='tabs' value='yes' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ar&#47;ArcheNova&#47;OverUndercostedanimals&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1738587873549');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+<div class='tableauPlaceholder' id='viz1738587873549' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ar&#47;ArcheNova&#47;OverUndercostedanimals&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='ArcheNova&#47;OverUndercostedanimals' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ar&#47;ArcheNova&#47;OverUndercostedanimals&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1738587873549');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
 
 <style type="text/css">
 .row {
+  width: 450px;
   display: flex;
   flex-wrap: wrap;
   padding: 0 4px;
+  float: right;
+  margin-left: 10px;
 }
 
 /* Create two equal columns that sits next to each other */
@@ -179,22 +182,45 @@ While our analysis here as limited value in comparing cards in terms of their st
 }
 
 .column img {
-  margin-top: 8px;
+  width: 170px;
+  margin-top: 12px;
   vertical-align: middle;
 }
 </style>
-<div class="row" align="right">
+<div class="row">
   <div class="column">
-    <img src="wedding.jpg">
-    <img src="rocks.jpg">
+    <img src="https://raw.githubusercontent.com/PixelT/ArkNovaCardsManager/refs/heads/master/dist/images/animal/442.jpg">
   </div>
   <div class="column">
-    <img src="underwater.jpg">
-    <img src="ocean.jpg">
+    <img src="https://raw.githubusercontent.com/PixelT/ArkNovaCardsManager/refs/heads/master/dist/images/animal/415.jpg">
   </div>
 </div>
+<p>
+The above plot shows the 5 most over- and underpriced animals according to the linear regression model. I will discuss some of them, with a particular focus on what these results tell us about the linear regression model itself. The most overpriced animal is the moose, with a predicted cost of 17.4 but an actual cost of 19. From my gameplay experience, the Moose does indeed feel overpriced (fun fact: my final model, StrategyAdviser's model, the linear regression based on StrategyAdvisor's model, and an earlier model I built <i>all</i> agree that the Moose is most overpriced. Poor Moose!). But there may also be something else going on, which will take a second to explain, but stay with me. The linear models used here all make an independence assumption: they operate under the assumption that each feature always has the same cost, no matter what other features the animal has. But the Moose has two features that work well together: it has the Flock ability, which allows you to add it to your zoo <i>without building an additional enclosure</i> if you already have another planteater (under some conditions). The idea is that the two species -- the planteater you already have, and the Moose -- would be compatible, and could be kept in the same enclosure. This is a powerful ability that can save you a lot of costs and effort. At the same time, the Moose has the requirement that you must already have two planteaters in your zoo before you can play the card. These two features work well together, because if you satisfy the planteater requirement, you will be more likely to be able to actually use the Flock ability, increasing its expected value. But the linear model cannot model such dependencies. In other words, the linear models may predict that the Moose is overcosted, but that may be at least partially due to a limitation of the model, rather than being a property of the animal card.
+</p>
+<p>
+Another overcosted animal is the Raccoon. But again, this prediction may be more of a model flaw than a statement about the card. One simplificatin that both I and StrategyAdvisor made is to group some abilities together into one feature. For example, the Boost ability is specific to one of five gameplay actions; the Raccoon boosts the "Association" action (simplified speaking, the Boost action allows your next gameplay action of that type to be stronger). In our models, all Boost abilities are treated as the same "Boost" feature, no matter which of the five actions they boost. This allows the model to be simpler and to generalize better across animals with the limited amount of data available (see also the point about overfitting below). However, the cost for boosting may actually be different, depending on which ability you boost. And indeed, from my gameplay experience, boosting the Association action is possibly the strongest effect. Therefore, the Raccoon may actually be worth its price, contrary to the model's prediction. 
+</p>
+<div class="row">
+  <div class="column">
+    <img src="https://raw.githubusercontent.com/PixelT/ArkNovaCardsManager/refs/heads/master/dist/images/animal/443.jpg">
+    <img src="https://raw.githubusercontent.com/PixelT/ArkNovaCardsManager/refs/heads/master/dist/images/animal/516.jpg">
+  </div>
+  <div class="column">
+    <img src="https://raw.githubusercontent.com/PixelT/ArkNovaCardsManager/refs/heads/master/dist/images/animal/438.jpg">
+    <img src="https://raw.githubusercontent.com/PixelT/ArkNovaCardsManager/refs/heads/master/dist/images/animal/510.jpg">
+  </div>
+</div>
+<p>
+Looking now at the underpriced animals, i.e. the ones which the model says have particularly good value, two patterns stand out. First, there are two Flock animals rated as undercosted. This may be a statement about game balance, but there is an alternate explanation: because the model tries to minimize the mean <i>squared</i> error, the model really tries to avoid outliers. Because the model tries to match the cost of the oh so overpriced Moose well, it will rate the Flock ability as particularly costly. This in turn will make the other Flock animals look particularly cheap. In other words, a single outlier can change the coefficient for a single feature, skewing the predictions for all other animals sharing the feature. The Red Deer and the Reindeer may not be quite as good value as the model states, and the Moose may be even more overcosted than it looks. Poor Moose indeed! 
+</p>
+<p>
+The other pattern for underpriced animals are exhibited by the Northern Cassowary and the White Stork. They are the two only animals with the Multiplier: Build ability. The Multiplier ability allows you to take the next gameplay action twice, instead of just once. Like the Boost ability, the Multiplier ability is specific to one of the five gameplay activities, but again, the linear models here treat all Multiplier abilities as the same feature. That is, the Northern Cassowary and the White Stork may be subject to a similar effect as we saw with the Raccoon, just the other way around. And indeed, from my gameplay experience, the Multiplier: Build ability might be the weakest version of the Multipliers, meaning that the model likely overrates the cost of the ability when judging the two birds. Once again, the prediction that the Northern Cassowary and the White Stork are "underpriced" may be more due to a model flaw than due to the game's balance decisions.
+</p>
+<p>
+I hope you found this section instructive to the limits of a linear regression model. For a more thorough analysis of what animals are good (or bad) value, I'd like to refer you again to <a href="https://www.youtube.com/watch?v=gCFPgfk0kSo">No Wonder's video</a>.
+</p>
 
-The above plot shows the 5 most over- and underpriced animals according to the linear regression model. I will discuss some of them, with a particular focus on what these results tell us about the linear regression model itself. The most overpriced animal 
 
 <h2 id="overfitting">Does the Model Overfit?</h2>
 <h2 id="conclusion">Conclusion</h2>
