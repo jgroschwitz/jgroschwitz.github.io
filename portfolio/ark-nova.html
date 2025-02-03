@@ -65,10 +65,137 @@ You simply multiply an animal's feature value with the corresponding model param
 </ul>
 <p>Let's dive right in!</p>
 
-<h2 id="previous-manual-analysis">Building on Previous Work: Strategy Advisor's Manual Analysis</h2>
+<h2 id="previous-manual-analysis">Building on Previous Work: StrategyAdvisor's Manual Analysis</h2>
+
+While researching this topic, I found out that a YouTuber called StrategyAdvisor had made a <a href="https://www.youtube.com/watch?v=-OTo1C7-OpM">video</a> where he explores the balance of Ark Nova with a similar approach. Except that instead of fitting a linear model automatically, he chose the weights of his model manually (he shared the parameters in a <a href="https://docs.google.com/spreadsheets/d/18_m21aq99m426WB3wDSq5bOPFIXVjexpSrZwABWpQBs/edit">spreadsheet</a>). To compare my code to his work, I built a version of my model that has the same underlying assumptions (as in, how exactly the text on a card is translated into features). Here you can see the parameters of my fitted model (blue), using StrategyAdvisor's assumptions, compared to his manually chosen parameters (orange):
+
+<div class='tableauPlaceholder' id='viz1738579677134' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ar&#47;ArcheNova&#47;CoefficientsLRvsSA&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='ArcheNova&#47;CoefficientsLRvsSA' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ar&#47;ArcheNova&#47;CoefficientsLRvsSA&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1738579677134');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+As you can see, they're quite close! I'm actually impressed by how closely StrategyAdvisor's values match the optimal solution that linear regression provides, given that he restricted himself to integer values, and did the whole thing by hand. I also reproduced StrategyAdvisor's results, by implementing a version of my model where I manually fix the parameters to StrategyAdvisor's ones. And it's a good thing I did, because I found a few typos in both his spreadsheet and my code! You can find the spreadsheet with my fixes <a href="https://docs.google.com/spreadsheets/d/19wb7HeT6teyjIsQwn_wMSO9kecQFXvGQB3ViY5HmKZA/edit?usp=sharing">here</a>.
+
+In my final model (the one I use everywhere else in this post), I made a couple of adjustments compared to StrategyAdvisor's assumptions, improving model fit and hopefully consistency. For those interested in the details:
+
+<div style="background-color: #cfc ; padding: 10px; border: 1px solid green;">
+<b>Model adjustments:</b>
+<ul style="margin:0px; margin-left: 20px">
+	  <li>StrategyAdvisor combines multiple animal effects that combine draw and discard effects into "draw" and "discard" features (Scavenging, Hunting, Sunbathing, Pouch, Digging, Perception). Since many of these effects are conditional, or are different from drawing and discarding in possibly meaningful ways, I treat them each as a separate feature.</li>
+	  <li>StrategyAdvisor uses some abilities of peaceful mode, and some of non-peaceful mode. For more consistency, I use all abilities from non-peaceful mode (which I consider the standard mode).</li>
+	  <li>StrategyAdvisor fuses the Dominance and Assertion abilities; I keep them separate.</li>
+</ul>
+</div>
+
+Here are the average errors that each model produces, both <a href="https://en.wikipedia.org/wiki/Mean_absolute_error">mean absolute error (MAE)</a> and <a href="https://en.wikipedia.org/wiki/Mean_squared_error">mean square error (MSE)</a>.
+
+<style type="text/css">
+  .table-container {
+    margin-top: 20px; /* Buffer space above the table */
+    margin-bottom: 20px; /* Buffer space below the table */
+  }
+
+  .tg {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-left: auto; /* Center the table horizontally */
+    margin-right: auto; /* Center the table horizontally */
+  }
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+</style>
+
+  <div class="table-container">
+<table class="tg"><thead>
+  <tr>
+    <th class="tg-0lax"></th>
+    <th class="tg-0lax">MAE</th>
+    <th class="tg-0lax">MSE</th>
+  </tr></thead>
+<tbody>
+  <tr>
+    <td class="tg-0lax">StrategyAdvisor's Model</td>
+    <td class="tg-0lax">0.83</td>
+    <td class="tg-0lax">1.36</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Linear Regression (StrategyAdvisor-like)</td>
+    <td class="tg-0lax">0.58</td>
+    <td class="tg-0lax">0.52</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Linear Regression (final model)</td>
+    <td class="tg-0lax">0.46</td>
+    <td class="tg-0lax">0.36</td>
+  </tr>
+</tbody>
+</table>
+</div>
+
+Linear regression minimizes MSE, so it is not surprising that the models perform particularly well in that measure (StrategyAdvisor aimed to minimize MAE). But it's nice to see that the mathematically optimized models also do well in terms of MAE. As we will see when we talk about overfitting below, a lower error rate is not necessarily a better model. But in principle, it is a desirable quality and I'm happy that the linear regression models do so well here.
+
 <h2 id="feature-worth">Detailed Strategy Results: What Each Feature is Worth</h2>
+
+This section is pretty much exclusively for Ark Nova nerds :)
+
+<div style="background-color: #cfc ; padding: 10px; border: 1px solid green;">
+<b>Game analysis:</b>
+Here are all the coefficients of the final model:
+<div class='tableauPlaceholder' id='viz1738578284337' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ar&#47;ArcheNova&#47;FinalModelCoefficients&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='ArcheNova&#47;FinalModelCoefficients' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ar&#47;ArcheNova&#47;FinalModelCoefficients&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1738578284337');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+Some observations:
+<ul style="margin:0px; margin-left: 20px">
+	  <li>Each attraction point ("ticket") costs ~2.7. We can compare this to some abilities that give conditional tickets: The Pack ability costs 7.8, so on average you'll want ~2.9 tickets to get good value. The Icon ability costs a whopping 15.7, so you'll want on average 5.8 tickets for good value.</li>
+	  <li>Both the Scavenging and the Hunter ability let you draw a specified number of cards (let's call it X)but you only get to keep one. I modeled these with two features: one that models the number of cards you get to keep ("Hunter Keep", "Scavenging Keep"), i.e. that is always 1, and one that models the number of cards you get to look at ("Hunter Draw", "Scavenging Draw"), i.e. that is X. Interestingly, the Hunter Keep feature is about 0 and Hunter Draw is non-zero, while Scavenging Keep's cost is non-zero, but Scavenging Draw has near zero cost. This might just be an artifact of the model, but it could indicate that the number of cards you draw when hunting is more important than the number of cards you draw when scavenging.</li>
+	  <li>The most expensive ability is the Emu's ability to build the special bird cage for free. While that is a useful thing to get, 16 seems like a steep cost given that building it the normal way costs 10. Seems only worth it in specific conditions, like when you want to skip the building upgrade but really want to play some birds, or if you are short on actions.</li>
+	  <li>We already saw that tickets cost 2.7. Conservation points cost 7.2. Using the board game arena convention of looking at tickets giving 1 point for the final score, and conservation points (usually) 3 points, and given that \(2.7*3=8.1\), conservation points on animals seem to be a bit better value for final points.</li>
+	  <li>The Inventive ability that gives you an X-marker is priced at 3.4. That's surprisingly low, given that the game usually prices X-markers at 5 (for example looking at the bonus fields you can pick up by building enclusures, or looking at the Trade ability in the Marine World expansion) or 4 (comparing the 3 X-markers and the 12 money reward for conservation projects). So getting X-markers from animals might be particularly good value.</li>
+	  <li>An extra animal symbol on the card costs 1.9, while an extra continent symbol costs 4.5. The discrepancy may be due to the fact that getting a partner zoo will give you extra reduction for the extra continent symbol.</li>
+</ul>
+</div>
+
+Since the coefficients of my model are close to the one in StrategyAdvisor's model, much of his <a href="https://www.youtube.com/watch?v=-OTo1C7-OpM">analysis</a> applies here too. I can only recommend the video! 
+
 <h2 id="utility">Predicting Cost vs Analyzing Utility</h2>
+
+It is important to keep in mind what our analysis here actually does, namely model the <i>cost</i> of an animal, and not its <i>utility</i> (which one might also call its benefit, or value). For example, if an animal costs 12, but a player values the benefit of adding it to their zoo at 15 money, then it's cost is 12 but it's utility is 15. This distinction is incredibly important when we talk about whether an animal is "good value" or "efficient" or "a strong card", because these terms evaluate whether an animal has a high utility compared to its cost. Our analysis is of only limited use to that. A YouTube channel named No Wonders actually made an <a href="https://www.youtube.com/watch?v=gCFPgfk0kSo">analysis</a> that is based on StrategyAdviser's analysis, using the same linear model, but instead of using the model's coefficients to try to predict the <i>cost</i> of an animal, the coefficients were chosen to reflect the <i>utility</i> of each effect. The results were quite different, and I definitely recommend the video.
+
+While our analysis here as limited value in comparing cards in terms of their strength or efficiency, it still has some! When our model predicts a higher cost for an animal than it's actual cost, we can still say that that animal is cheaper than it should be under our model. That is, given the features of the animal, we pay less for it than we would pay for those features on average. That's still a valid way to look at "good value", and the next section does just that.
+
 <h2 id="overpriced">Over- and Underpriced Animals?</h2>
+
+<div class='tableauPlaceholder' id='viz1738587873549' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ar&#47;ArcheNova&#47;OverUndercostedanimals&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='ArcheNova&#47;OverUndercostedanimals' /><param name='tabs' value='yes' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ar&#47;ArcheNova&#47;OverUndercostedanimals&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1738587873549');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+<style type="text/css">
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+  flex: 50%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+</style>
+<div class="row" align="right">
+  <div class="column">
+    <img src="wedding.jpg">
+    <img src="rocks.jpg">
+  </div>
+  <div class="column">
+    <img src="underwater.jpg">
+    <img src="ocean.jpg">
+  </div>
+</div>
+
+The above plot shows the 5 most over- and underpriced animals according to the linear regression model. I will discuss some of them, with a particular focus on what these results tell us about the linear regression model itself. The most overpriced animal 
+
 <h2 id="overfitting">Does the Model Overfit?</h2>
 <h2 id="conclusion">Conclusion</h2>
 </div>
