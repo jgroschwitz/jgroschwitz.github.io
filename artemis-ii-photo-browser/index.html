@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Artemis II Image Explorer</title>
+
+<script src="https://d3js.org/d3.v7.min.js"></script>
+
+<style>
+    body {
+        margin: 0;
+        overflow: hidden;
+        background: #111;
+        color: white;
+        font-family: sans-serif;
+    }
+
+    svg {
+
+        position: absolute;
+
+        left: 0;
+        top: 0;
+
+        display: block;
+
+        transition:
+            top 0.3s ease,
+            height 0.3s ease;
+    }
+
+    .point {
+        fill: white;
+        opacity: 0.3;
+    }
+
+    #tooltip {
+        position: absolute;
+        pointer-events: none;
+
+        background: rgba(0,0,0,0.9);
+        border: 1px solid #666;
+        padding: 8px;
+        z-index: 1000;
+
+        display: none;
+    }
+
+    #tooltip img {
+        width: 128px;
+        height: 128px;
+        object-fit: contain;
+        display: block;
+    }
+
+    #tooltip .label {
+        margin-top: 5px;
+        font-size: 12px;
+        max-width: 128px;
+        word-break: break-all;
+    }
+
+    #detail-panel {
+
+        position: absolute;
+
+        left: 0;
+        top: 0;
+
+        width: 100%;
+        height: 66vh;
+
+        background: #000;
+
+        display: none;
+
+        overflow: hidden;
+
+        border-bottom: 1px solid #333;
+    }
+
+    #detail-image {
+
+        width: 100%;
+        height: calc(100% - 40px);
+
+        object-fit: contain;
+
+        display: block;
+    }
+
+    #detail-info {
+
+        height: 40px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+
+        background: #111;
+    }
+
+    #detail-link {
+
+        color: #AAAAAA;
+        text-decoration: none;
+    }
+
+    #detail-link:hover {
+
+        text-decoration: underline;
+    }
+    </style>
+</head>
+
+<body>
+
+<div id="tooltip">
+    <img id="tooltip-image">
+    <div class="label" id="tooltip-label"></div>
+</div>
+
+<div id="detail-panel">
+
+    <img id="detail-image">
+
+    <div id="detail-info">
+        <a id="detail-link" target="_blank">
+            Click here for full resolution and metadata on NASA website
+        </a>
+    </div>
+
+</div>
+
+<svg id="plot"></svg>
+
+<script src="interface.js"></script>
+
+</body>
+</html>
